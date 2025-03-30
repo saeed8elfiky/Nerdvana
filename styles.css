@@ -213,3 +213,40 @@ input[type=text], select, textarea {
 .imgcard{
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
 }
+
+
+
+/* Make the main content responsive */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column; /* Stack image and text */
+        align-items: center; /* Center everything */
+        text-align: center;
+    }
+    .section img {
+        width: 90%; /* Make the image fit smaller screens */
+        max-width: 300px;
+    }
+}
+
+/* Ensure cards are responsive */
+@media (max-width: 768px) {
+    .cards_sec,
+    .cards_sec2 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards,
+    .cards2 {
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
+/* Improve the footer layout */
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+        padding: 15px;
+    }
+}
