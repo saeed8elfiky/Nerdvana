@@ -161,8 +161,9 @@ input[type=text], select, textarea {
     background: white;
     border-radius: 12px;
     /*box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);*/
-    gap: 60px; /* Adds space between text and image */
+    gap: 30px; /* Adds space between text and image */
     overflow: hidden;
+    align-items: center;
 }
 
 .section img {
@@ -170,8 +171,9 @@ input[type=text], select, textarea {
     height: auto;
     border-radius: 12px;
     object-fit: cover;
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     order: 2; /* Moves image to the right */
+   
     
 }
 
@@ -216,6 +218,7 @@ input[type=text], select, textarea {
 
 
 
+
 /* Make the main content responsive */
 @media (max-width: 768px) {
     .section {
@@ -250,3 +253,4 @@ input[type=text], select, textarea {
         padding: 15px;
     }
 }
+
