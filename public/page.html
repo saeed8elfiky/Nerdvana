@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NERDVANA</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <h1>NERDVANA</h1>
+        <nav class="NAVBAR">
+            <ul>
+                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+      <form id="buy-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="product" value="Product A" hidden />
+        <button type="submit">Buy Now</button>
+      </form>
+      
+      <script>
+        document.getElementById('buy-form').addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const form = e.target;
+          const data = {
+            name: form.name.value,
+            email: form.email.value,
+            product: form.product.value,
+          };
+      
+          const res = await fetch('https://e4b4830d-91f5-4590-be31-723efc337b63-00-2wd47ebijbzrm.worf.replit.dev/api/buy
+', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+          });
+      
+          const msg = await res.text();
+          alert(msg);
+        });
+      </script>
+      
+    </main>
+</body>    
+    <footer>
+        <p>&copy; 2025 Nerdvana. All rights reserved.</p>
+    </footer>
+
+</html>
