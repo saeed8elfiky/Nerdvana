@@ -40,8 +40,7 @@
             product: form.product.value,
           };
       
-          const res = await fetch('https://e4b4830d-91f5-4590-be31-723efc337b63-00-2wd47ebijbzrm.worf.replit.dev/api/buy
-', {
+          const res = await fetch('https://e4b4830d-91f5-4590-be31-723efc337b63-00-2wd47ebijbzrm.worf.replit.dev/api/buy',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),
