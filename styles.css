@@ -338,11 +338,14 @@ input[type=text], select, textarea {
     }
     
 }
-/* Optional media query to adjust font size or spacing */
 @media (max-width: 768px) {
-  .nav-links li a {
-    font-size: 14px; /* smaller font on small screens */
-  }
+    .nav-links {
+        gap: 5px; /* Reduce spacing */
+    }
+    .nav-links li a {
+        padding: 8px 10px; /* Smaller padding */
+        font-size: 14px; /* Smaller text */
+    }
 }
 
 
