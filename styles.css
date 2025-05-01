@@ -300,7 +300,33 @@ input[type=text], select, textarea {
 }
 
 
+/* NAVIGATION LINKS - FORCE HORIZONTAL */
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px; /* Adjust spacing between links */
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    white-space: nowrap; /* Prevents text wrapping */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
 
+.nav-links li {
+    flex-shrink: 0; /* Prevents items from shrinking */
+}
+
+.nav-links li a {
+    padding: 8px 12px;
+    display: inline-block;
+}
+
+/* Remove mobile stacking (delete this if it exists) */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: row; /* Force horizontal layout */
+    }
+}
 
 /* Make the main content responsive */
 @media (max-width: 768px) {
