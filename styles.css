@@ -370,7 +370,7 @@ input[type=text], select, textarea {
     }
     .nav-links li a {
         padding: 8px 10px; /* Smaller padding */
-        font-size: 14px; /* Smaller text */
+        font-size: 16px; /* Smaller text */
     }
 }
 
